@@ -5,22 +5,22 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class A {
-    private static final OutputStream OS      = System.out;
-    private static final Scanner      SCANNER = new Scanner (System.in);
+    private static final Scanner      IN = new Scanner (System.in);
+    private static final OutputStream OS = System.out;
 
     public static void main (final String[] args) {
-        try (final PrintWriter out = new PrintWriter (OS)) {
-            solve (SCANNER, out);
+        try (final var out = new PrintWriter (OS)) {
+            solve (out);
         }
     }
 
-    private static void solve (final Scanner scanner, final PrintWriter out) {
-        final int t = scanner.nextInt ();
-        for (int i = 0; i < t; i++) {
-            final int n = scanner.nextInt ();
-            int ans = 0;
-            for (int j = 0; j < n; j++) {
-                final int r = scanner.nextInt ();
+    private static void solve (final PrintWriter out) {
+        final var t = IN.nextInt ();
+        for (var i = 0; i < t; i++) {
+            final var n = IN.nextInt ();
+            var ans = 0;
+            for (var j = 0; j < n; j++) {
+                final var r = IN.nextInt ();
                 if (r != 2) {
                     ans++;
                 }
